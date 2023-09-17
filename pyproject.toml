@@ -2,7 +2,7 @@
 name = "microconnection"
 version = "0.1.0"
 description = "A bot for connecting"
-authors = ["BadPythonCoder <xsare435@gmail.com>", "And all contributors"]
+authors = ["BadPythonCoder <xsare435@gmail.com>", "And all contributors"] # TODO: add all the other devs
 license = "MIT"
 readme = "README.md"
 
@@ -15,6 +15,11 @@ tortoise = "^0.1.1"
 [tool.poetry.group.dev.dependencies]
 aerich = "^0.7.2"
 
+
+[tool.aerich]
+tortoise_orm = "micronconnection.tortoise.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
